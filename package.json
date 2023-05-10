@@ -1,5 +1,5 @@
 {
-  "name": "@lexacode/package-example",
+  "name": "@hirenrparghi/package-example",
   "version": "0.0.1",
   "description": "Example project for TypeScript packages",
   "main": "index.js",
@@ -33,14 +33,14 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
-  "author": "Axel Navarro <navarroaxel@gmail.com>",
+  "author": "Axel Navarro <hirenparghi90l@gmail.com>",
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lexacode/package-example.git"
+    "url": "git+https://github.com/hirenrparghi/package-example.git"
   },
   "bugs": {
-    "url": "https://github.com/lexacode/package-example/issues"
+    "url": "https://github.com/hirenrparghi/package-example/issues"
   },
-  "homepage": "https://github.com/lexacode/package-example"
+  "homepage": "https://github.com/hirenrparghi/package-example"
 }
