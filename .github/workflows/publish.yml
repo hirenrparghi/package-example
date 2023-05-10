@@ -25,3 +25,10 @@ jobs:
         working-directory: ./build
         env:
           NPM_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          
+      - name: Clean Workspace
+        if: always()
+        run: |
+         ls -la
+         rm -rf ./* ./.[^.] ./.??*
+         ls -la       
