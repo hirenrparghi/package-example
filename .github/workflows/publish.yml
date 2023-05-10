@@ -24,6 +24,7 @@ jobs:
           ls -la
           cd build
           ls -la
+          cat .npmrc
       - run: npm publish
         working-directory: ./build
         env:
