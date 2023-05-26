@@ -1,6 +1,6 @@
 {
   "name": "@hirenrparghi/package-example",
-  "version": "${env:npm_package_name}",
+  "version": "${npm_package_name}",
   "description": "Example project for TypeScript packages",
   "main": "index.js",
   "scripts": {
