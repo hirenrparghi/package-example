@@ -1,6 +1,6 @@
 {
   "name": "@hirenrparghi/package-example",
-  "version": "${npm_package_name}",
+  "version": "2.3.9",
   "description": "Example project for TypeScript packages",
   "main": "index.js",
   "scripts": {
@@ -37,7 +37,7 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hirenrparghi/package-example.git"
+    "url": "git://github.com/hirenrparghi/package-example.git"
   },
   "bugs": {
     "url": "https://github.com/hirenrparghi/package-example/issues"
