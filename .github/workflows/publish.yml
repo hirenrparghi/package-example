@@ -18,9 +18,7 @@ jobs:
       - run: |
           npm install
           npm run build
-          npm pack
-          npm publish
-          
+
       - name: Clean Workspace
         if: always()
         run: |
