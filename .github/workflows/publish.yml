@@ -18,7 +18,7 @@ jobs:
       - run: |
           npm install
           npm run build
-          pwd
+          npm pack
           npm publish
           
       - name: Clean Workspace
