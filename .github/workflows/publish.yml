@@ -40,6 +40,11 @@ jobs:
           fi
         env:
           NODE_AUTH_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+      - name: download published package
+        run: |
+          npm config set @hirenrparghi:registry https://npm.pkg.github.com
+          npm login --scope=@hirenrparghi --registry=https://npm.pkg.github.com
+          npm i @hirenrparghi/package-example@2.4.5         
       - name: Clean Workspace
         if: always()
         run: |
