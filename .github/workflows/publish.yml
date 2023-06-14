@@ -43,7 +43,9 @@ jobs:
       - name: download published package
         run: |
           npm config set @hirenrparghi:registry https://npm.pkg.github.com
-          npm i @hirenrparghi/package-example@2.4.5         
+          npm i @hirenrparghi/package-example@2.4.5   
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.ACCESS_TOKEN }}          
       - name: Clean Workspace
         if: always()
         run: |
