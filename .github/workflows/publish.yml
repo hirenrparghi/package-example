@@ -37,7 +37,7 @@ jobs:
             npm publish
           fi
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.ACCESS_TOKEN }}
       - name: Clean Workspace
         if: always()
         run: |
