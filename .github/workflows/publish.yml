@@ -45,7 +45,11 @@ jobs:
           npm config set @hirenrparghi:registry https://npm.pkg.github.com
           npm i @hirenrparghi/package-example@2.4.5   
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.ACCESS_TOKEN }}          
+          NODE_AUTH_TOKEN: ${{ secrets.ACCESS_TOKEN }} 
+      - name: check package
+        run : |
+          pwd
+          ls -la
       - name: Clean Workspace
         if: always()
         run: |
