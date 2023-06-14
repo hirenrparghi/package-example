@@ -19,6 +19,7 @@ jobs:
           npm install
           npm run build
   main:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
