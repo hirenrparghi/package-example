@@ -29,7 +29,8 @@ jobs:
           unzip -o Modules.zip -d Modules
       - name: publish
         run: |        
-          echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" >> .npmrc
+          scope: ${{ github.repository_owner }}       
+          echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" >> ${{ github.workspace }}/.npmrc          
           cd Modules
           pwd
           ls -la
