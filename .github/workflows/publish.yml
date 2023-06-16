@@ -23,14 +23,9 @@ jobs:
           zip Modules.zip ./* -r
           ls
           pwd
-  main:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
+
+      - name: publish
         with:
-          node-version: 16
           registry-url: https://npm.pkg.github.com
           scope: '@hirenrparghi'
       - name: npm publish
