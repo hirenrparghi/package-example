@@ -28,7 +28,8 @@ jobs:
           mkdir Modules
           unzip -o Modules.zip -d Modules
       - name: publish
-        run: |                       
+        run: |       
+          npm install
           echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" > ${{ github.workspace }}/.npmrc
           echo "@hirenrparghi:registry=https://npm.pkg.github.com/" >> ${{ github.workspace }}/.npmrc
           cd Modules
