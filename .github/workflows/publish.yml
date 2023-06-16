@@ -23,10 +23,13 @@ jobs:
           zip Modules.zip ./* -r
           ls
           pwd
+      - name: Extract package
+        run: |
+          unzip Modules.zip -o Modules
       - name: publish
         run: |
           echo "//npm.pkg.github.com/:_authToken=${{ secrets.ACCESS_TOKEN }}" >> .npmrc
-          cd Modules.zip
+          cd Modules
         env:
           NODE_AUTH_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           
