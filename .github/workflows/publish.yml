@@ -28,11 +28,12 @@ jobs:
           mkdir Modules
           unzip -o Modules.zip -d Modules
       - name: publish
-        run: |
+        run: |        
           echo "//npm.pkg.github.com/:_authToken=${{ secrets.ACCESS_TOKEN }}" >> .npmrc
           cd Modules
           pwd
           ls -la
+          npm adduser
           npm login --registry=https://npm.pkg.github.com
           npm publish   
         env:
