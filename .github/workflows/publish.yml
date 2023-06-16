@@ -27,13 +27,32 @@ jobs:
         run: |
           mkdir Modules
           unzip -o Modules.zip -d Modules
+          
+  publish-gpr:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      packages: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          registry-url: https://npm.pkg.github.com/
+      - run: npm ci
+      - run: npm publish
+      - run: pwd
+      - run: ls -la
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}          
        
-      - name: publish
-        run: |      
-          npm config set _auth ${{ secrets.ACCESS_TOKEN }} && npm config set registry https://npm.pkg.github.com/ && npm config set always-auth=true && npm config set email=hirenparghi90@gmail.com
-          npm install
-          npm login --scope=@${{ github.repository_owner }} --registry=https://npm.pkg.github.com/            
-          npm publish Modules.zip
+#       - name: publish
+#         run: |      
+#           npm config set _auth ${{ secrets.ACCESS_TOKEN }} && npm config set registry https://npm.pkg.github.com/ && npm config set always-auth=true && npm config set email=hirenparghi90@gmail.com
+#           npm install
+#           npm login --scope=@${{ github.repository_owner }} --registry=https://npm.pkg.github.com/            
+#           npm publish Modules.zip
         
 #       - name: publish1
 #         run: |
