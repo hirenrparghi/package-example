@@ -36,7 +36,9 @@ jobs:
           pwd
           ls -la
           npm login --scope=@${{ github.repository_owner }} --registry=https://npm.pkg.github.com/
-          npm publish --registry=https://npm.pkg.github.com/
+          npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         
 
 #       - name: publish
