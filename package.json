@@ -30,15 +30,7 @@
     "node": ">=16.8.0",
     "npm": ">=7.5.0"
   },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  },
-  "author": "Axel Navarro <hirenparghi90l@gmail.com>",
-  "license": "ISC",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/hirenrparghi/package-example.git"
-  },
+
   "bugs": {
     "url": "https://github.com/hirenrparghi/package-example/issues"
   },
