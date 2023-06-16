@@ -33,9 +33,7 @@ jobs:
           cd Modules
           pwd
           ls -la
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          
+          npm publish --registry=https://npm.pkg.github.com          
 
 #       - name: publish
 #         uses: 
