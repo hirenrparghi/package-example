@@ -33,3 +33,14 @@
 }
 
 
+  "author": "Axel Navarro <hirenparghi90l@gmail.com>",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/hirenrparghi/package-example.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hirenrparghi/package-example/issues"
+  },
+  "homepage": "https://github.com/hirenrparghi/package-example"
+}
