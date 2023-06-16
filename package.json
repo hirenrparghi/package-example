@@ -32,7 +32,9 @@
   },
 },
 
-
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "author": "Axel Navarro <hirenparghi90l@gmail.com>",
   "license": "ISC",
   "repository": {
