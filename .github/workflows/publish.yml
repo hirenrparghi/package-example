@@ -25,7 +25,8 @@ jobs:
           pwd
       - name: publish
         run: |
-          npm publish @https://npm.pkg.github.com/Modules.zip
+          echo "//npm.pkg.github.com/:_authToken=${{ secrets.ACCESS_TOKEN }}" >> .npmrc
+          cd Modules.zip
         env:
           NODE_AUTH_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           
