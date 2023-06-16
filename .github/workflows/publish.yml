@@ -25,7 +25,8 @@ jobs:
           pwd
       - name: Extract package
         run: |
-          unzip -o Modules.zip
+          mkdir Modules
+          unzip -o Modules.zip -d Modules
       - name: publish
         run: |
           echo "//npm.pkg.github.com/:_authToken=${{ secrets.ACCESS_TOKEN }}" >> .npmrc
