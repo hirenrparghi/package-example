@@ -30,13 +30,12 @@ jobs:
       - name: publish
         run: |       
           npm install
-          echo "//npm.pkg.github.com/:_authToken=${{ secrets.ACCESS_TOKEN }}" > ${{ github.workspace }}/.npmrc
+          echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" > ${{ github.workspace }}/.npmrc
           echo "@hirenrparghi:registry=https://npm.pkg.github.com/" >> ${{ github.workspace }}/.npmrc
-          cd Modules
           pwd
           ls -la
           npm login --scope=@${{ github.repository_owner }} --registry=https://npm.pkg.github.com/
-          npm publish
+          npm publish Modules.zip
 
         
 
