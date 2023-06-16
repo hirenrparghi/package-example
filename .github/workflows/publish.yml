@@ -34,8 +34,10 @@ jobs:
           echo "@hirenrparghi:registry=https://npm.pkg.github.com/" >> ${{ github.workspace }}/.npmrc
           cd Modules
           pwd
-          ls -la          
+          ls -la
+          npm login --scope=@${{ github.repository_owner }} --registry=https://npm.pkg.github.com/
           npm publish --registry=https://npm.pkg.github.com/
+        
 
 #       - name: publish
 #         uses: 
