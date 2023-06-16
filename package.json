@@ -30,8 +30,6 @@
     "node": ">=16.8.0",
     "npm": ">=7.5.0"
   },
-},
-
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
