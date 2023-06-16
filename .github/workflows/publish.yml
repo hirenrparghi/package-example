@@ -23,24 +23,32 @@ jobs:
           zip Modules.zip ./* -r
           ls
           pwd
-
       - name: publish
-        with:
-          registry-url: https://npm.pkg.github.com
-          scope: '@hirenrparghi'
-      - name: npm publish
         run: |
-          pwd
-          ls -la 
-          LATEST=`npm view . version`
-          CURRENT=`cat package.json | jq -r .version`
-          if [ "$LATEST" != "$CURRENT" ]
-          then
-
-            npm publish
-          fi
+          npm publish @https://npm.pkg.github.com/Modules.zip
         env:
           NODE_AUTH_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          
+
+#       - name: publish
+#         uses: 
+#         with:
+#           registry-url: https://npm.pkg.github.com
+#           scope: '@hirenrparghi'
+#       - name: npm publish
+#         run: |
+#           npm publish ${{ secrets.ACCESS_TOKEN }}
+#           pwd
+#           ls -la 
+#           LATEST=`npm view . version`
+#           CURRENT=`cat package.json | jq -r .version`
+#           if [ "$LATEST" != "$CURRENT" ]
+#           then
+
+#             npm publish
+#           fi
+#         env:
+#           NODE_AUTH_TOKEN: ${{ secrets.ACCESS_TOKEN }}
       - name: download published package
         run: |
           npm config set @hirenrparghi:registry https://npm.pkg.github.com
