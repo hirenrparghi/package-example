@@ -28,13 +28,12 @@ jobs:
           mkdir Modules
           unzip -o Modules.zip -d Modules
       - name: publish
-        run: |        
-          scope: ${{ github.repository_owner }}       
+        run: |                       
           echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" > ${{ github.workspace }}/.npmrc          
           cd Modules
           pwd
-          ls -la
-          npm publish --registy=https://npm.pkg.github.com
+          ls -la          
+          npm publish --registry=https://npm.pkg.github.com/
 
 #       - name: publish
 #         uses: 
