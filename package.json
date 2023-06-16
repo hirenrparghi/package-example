@@ -30,7 +30,7 @@
     "node": ">=16.8.0",
     "npm": ">=7.5.0"
   },
-}
+},
 
 
   "author": "Axel Navarro <hirenparghi90l@gmail.com>",
