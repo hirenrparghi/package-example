@@ -29,14 +29,19 @@ jobs:
           unzip -o Modules.zip -d Modules
        
       - name: publish
-        run: |       
-          echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" > ${{ github.workspace }}/.npmrc
-          echo "@hirenrparghi:registry=https://npm.pkg.github.com/" >> ${{ github.workspace }}/.npmrc
-          pwd
-          ls -la
-          npm install
-          npm login --scope=@${{ github.repository_owner }} --registry=https://npm.pkg.github.com/
-          npm publish Modules.zip
+        run: |
+          npm config set _auth ${{ secrets.GITHUB_TOKEN }} && npm config set registry https://npm.pkg.github.com/ && npm config set always-auth=true && npm config set email=hirenparghi90@gmail.com
+          npm publish
+#       - name: publish1
+#         run: |
+#           echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" > ${{ github.workspace }}/.npmrc
+#           echo "@hirenrparghi:registry=https://npm.pkg.github.com/" >> ${{ github.workspace }}/.npmrc
+#           pwd
+#           ls -la
+#           npm install
+#           npm login --scope=@${{ github.repository_owner }} --registry=https://npm.pkg.github.com/
+#           npm publish Modules.zip
+
 
         
 
