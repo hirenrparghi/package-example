@@ -1,5 +1,5 @@
 {
-  "name": "@hirenrparghi/package-example",
+  "name": "package-example",
   "version": "2.4.5",
   "description": "Example project for TypeScript packages",
   "main": "index.js",
