@@ -22,6 +22,7 @@ jobs:
       - run: |
           zip Modules.zip ./* -r
           ls
+          pwd
   main:
     needs: build
     runs-on: ubuntu-latest
